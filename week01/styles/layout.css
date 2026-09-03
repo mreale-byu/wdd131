@@ -1,0 +1,95 @@
+:root {
+  /* Colors */
+  --color-dark: #333333;
+  --color-black: #000000;
+  --color-light-gray: #cccccc;
+  --color-white: #ffffff;
+  --color-text: #222222;
+
+  /* Fonts */
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-serif);
+  color: var(--color-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+nav {
+  background-color: var(--color-black);
+}
+
+/* NAV elements uses CSS Flex */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+  
+nav a {
+  display: block;
+  padding: 15px 20px;
+  color: var(--color-white);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+/* MAIN uses CSS Grid */
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.content {
+  background-color: var(--color-light-gray);
+  padding: 20px;
+}
+
+aside {
+  background-color: var(--color-white);
+  padding: 20px;
+}
+
+main h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+footer {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
