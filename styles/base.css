@@ -1,0 +1,143 @@
+:root {
+  /* Colors */
+  --color-dark: #333333;
+  --color-black: #000000;
+  --color-light-gray: #cccccc;
+  --color-white: #ffffff;
+  --color-text: #222222;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+	padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: var(--color-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding: 20px;
+  text-align: center;
+}
+
+header span {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+/* NAV elements uses CSS Flex */
+nav {
+  background-color: var(--color-black);
+  padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav a {
+  display: block;
+  padding: 15px 20px;
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+nav a {
+    transition: transform 0.2s ease, font-weight 0.2s ease;
+}
+
+nav a:hover {
+    transform: scale(1.2);
+}
+
+/* MAIN uses CSS Grid */
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(600px, 2fr) minmax(300px, 1fr);
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  max-width: 1024px;
+  margin: 1rem auto 1rem auto;
+}
+
+main > h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #bbb;
+  border-radius: 0.45rem;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.card > h2 {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    background: #245579;
+    color: white;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.card > :not(h2) {
+    padding: 0.75rem 1rem;
+    padding-inline: 1rem;
+}
+
+.profile > img {
+    border-radius: 2%;
+    margin-bottom: 1rem;
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+.flag {
+    display: flex;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    max-width: 80%;
+}
+
+.flag > figure > figcaption {
+    font-style: italic;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.flag-title {
+    margin: 0 0 0.9rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--color-dark);
+    padding-bottom: 0.5rem;
+    max-width: 78%;
+}
+
+footer {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  text-align: center;
+  padding: 30px 20px;
+}
+
+footer h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
