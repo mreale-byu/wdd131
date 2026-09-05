@@ -129,6 +129,14 @@ main > h1 {
     max-width: 78%;
 }
 
+.resources {
+   list-style: none;
+}
+
+.resources li {
+    margin-bottom: 0.5rem;
+}
+
 footer {
   background-color: var(--color-dark);
   color: var(--color-white);
