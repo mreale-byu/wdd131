@@ -24,9 +24,9 @@ body {
 }
 
 header {
+  padding-top: 20px;  
   background-color: var(--color-dark);
   color: var(--color-white);
-  padding: 20px;
   text-align: center;
 }
 
@@ -38,8 +38,9 @@ header span {
 
 /* NAV elements uses CSS Flex */
 nav {
+  margin-top: 20px;
   background-color: var(--color-black);
-  padding: 5px;
+  padding: 10px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -47,14 +48,10 @@ nav {
 
 nav a {
   display: block;
-  padding: 15px 20px;
   color: var(--color-white);
   text-decoration: none;
   font-size: 1.1rem;
-}
-
-nav a {
-    transition: transform 0.2s ease, font-weight 0.2s ease;
+  transition: transform 0.2s ease, font-weight 0.2s ease;
 }
 
 nav a:hover {
