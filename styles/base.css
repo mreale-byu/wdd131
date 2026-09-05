@@ -5,6 +5,7 @@
   --color-light-gray: #cccccc;
   --color-white: #ffffff;
   --color-text: #222222;
+  --color-blue: #245579;
 }
 
 * {
@@ -77,7 +78,7 @@ main > h1 {
 .card {
   display: flex;
   flex-direction: column;
-  border: 1px solid #bbb;
+  border: 1px solid var(--color-light-gray);
   border-radius: 0.45rem;
   overflow: hidden;
   min-height: 0;
@@ -86,8 +87,8 @@ main > h1 {
 .card > h2 {
     margin: 0;
     padding: 0.75rem 1rem;
-    background: #245579;
-    color: white;
+    background: var(--color-blue);
+    color: var(--color-white);
     text-align: center;
     font-size: 1.25rem;
 }
