@@ -11,11 +11,13 @@ body {
   font-weight: 400;
   color: #000000;
   min-height: 100vh;
-  
+  /* Sticky footer: the rows stack, and main takes the slack. */
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-  background-color: #3a0963;
+  background-color: #5414c9;
   color: #ffffff;
   display: flex;
   flex-direction: row;
@@ -93,6 +95,7 @@ header:has(nav.show) span {
 main {
   margin: 1rem auto 1rem auto;
   max-width: 800px;
+  flex: 1; /* absorbs leftover height so the footer sits at the bottom */
 }
 
 main > h1 {
@@ -120,7 +123,7 @@ figcaption{
 }
 
 footer {
-  background-color: #3a0963;
+  background-color: #5414c9;
   color: #ffffff;
   text-align: center;
   padding: 10px 20px;
