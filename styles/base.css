@@ -1,12 +1,3 @@
-:root {
-  /* Colors */
-  --color-dark: #333333;
-  --color-black: #000000;
-  --color-light-gray: #cccccc;
-  --color-white: #ffffff;
-  --color-text: #222222;
-  --color-blue: #245579;
-}
 
 * {
   box-sizing: border-box;

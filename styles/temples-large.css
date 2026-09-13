@@ -1,0 +1,28 @@
+/* Media Query for wider than mobile viewports. Oh boy, this is tricky because I have to handle lingering .show classes and flex behavior changes. */
+@media only screen and (min-width: 40em) {
+	nav {
+		flex-direction: row;
+		gap: 3rem;
+	}
+	nav a {
+		display: block; /* change state in small view */
+		flex: 1 1 100%;
+		text-align: center;
+	}
+	/* The .show class can linger on nav after the viewport grows, so the
+	   title is restored here - it is only meant to hide in the small view. */
+	header:has(nav.show) span {
+		display: block;
+	}
+	/* A .show left over from a resize must not stretch the wide nav. */
+	nav.show {
+		flex: 0 1 auto;
+	}
+	#menu {
+		display: none;
+	}
+	/* The gallery goes multi-column once there is room for it. */
+	main > div {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+}

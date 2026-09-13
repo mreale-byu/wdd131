@@ -1,0 +1,133 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+	padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  min-height: 100vh;
+  
+}
+
+header {
+  background-color: #3a0963;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+header span {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column; /* the open menu stacks; the wide view switches to a row */
+  gap: 0; /* spacing between the stacked links comes from the link padding */
+}
+
+nav a {
+	display: none;
+	padding: 0.75rem;
+	text-align: left;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 700;
+	transition: 0.5s;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+nav a:hover,
+nav a:active {
+	color: #ffffff;
+	background-color: #000000;
+}
+
+/* The .show class is toggled on <nav> by the script. */
+nav.show a {
+	display: block;
+}
+
+/* Small view: In my version, the open menu takes the whole bar width, left-aligned.
+   #menu is a sibling flex item, so growing nav stops at the button
+   instead of running underneath it. */
+nav.show {
+	flex: 1;
+}
+
+/* Small-view only: when the menu is open the nav links stack below the
+   header, so the "Temple Album" title is hidden to keep the bar clean. */
+header:has(nav.show) span {
+	display: none;
+}
+
+#menu.show::before {
+	content: "X";
+}
+
+/* Mobile View */
+#menu {
+	display: block;
+	text-align: right; /* the anchor fills the width, so this pushes the glyph right */
+	font-size: 2rem;
+	font-weight: 700;
+	text-decoration: none;
+	padding: 0.5rem 0.75rem;
+	color: #ffffff;
+}
+
+#menu::before {
+	content: "≡";
+}
+
+main {
+  margin: 1rem auto 1rem auto;
+  max-width: 800px;
+}
+
+main > h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+main > div {
+  display: grid;
+  grid-template-columns: 1fr; /* one column on small screens */
+  gap: 1rem;
+}
+
+main > div img {
+  display: block; /* drops the inline-baseline gap under the image */
+  width: 100%;
+  height: auto;
+}
+
+figcaption{
+  text-align: center;
+  font-size: 1rem;
+  color: #333333;
+  padding: 0.5rem;
+}
+
+footer {
+  background-color: #3a0963;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+footer h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
