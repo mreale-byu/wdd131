@@ -75,21 +75,27 @@ header:has(nav.show) span {
 
 #menu.show::before {
 	content: "X";
+	content: "X" / ""; /* Now, the glyph is decorative: the name comes from aria-label */
 }
 
 /* Mobile View */
 #menu {
 	display: block;
-	text-align: right; /* the anchor fills the width, so this pushes the glyph right */
+	appearance: none; /* drops the native button chrome (iOS rounds and shades it) */
+	background: none;
+	border: none;
+	cursor: pointer;
+	text-align: right;
+	font-family: inherit; /* buttons do not inherit the family, only the size set below */
 	font-size: 2rem;
 	font-weight: 700;
-	text-decoration: none;
 	padding: 0.5rem 0.75rem;
 	color: #ffffff;
 }
 
 #menu::before {
 	content: "≡";
+	content: "≡" / "";
 }
 
 main {
