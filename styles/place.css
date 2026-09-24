@@ -191,6 +191,7 @@ footer>div>p {
     padding: 10px 0 16px;
     background: var(--pale-green-translucent);
     box-shadow: 5px 5px 10px 5px var(--black-40);
+    z-index: 1; /* bug fix: ensure card is above other elements */
   }
 
   .card>h2 {
