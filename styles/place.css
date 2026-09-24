@@ -224,6 +224,6 @@ footer>div>p {
     flex-shrink: 0;
     width: 40px;
     height: 38px;
-    background: url("../images/weather-small.svg") no-repeat center / contain;
+    background: url("../images/weather-small.png") no-repeat center / contain;
   }
 }
