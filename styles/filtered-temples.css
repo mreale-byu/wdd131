@@ -30,7 +30,6 @@ body {
   flex-direction: column;
   /* Sunset sky for the small view! */
   background: linear-gradient(to bottom, var(--light-blue), var(--light-pink));
-  background: linear-gradient(to bottom in oklab, var(--light-blue), var(--light-pink));
 }
 
 header {
