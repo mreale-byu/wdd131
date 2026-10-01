@@ -1,0 +1,261 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --dark-gray: #333333;
+  --gray: #666666;
+  --purple: #5414c9;
+  --light-blue: #b2bdd0;
+  --light-pink: #d3aaa4;
+  /* Same white and black, carrying an alpha channel. */
+  --translucent-white: #ffffffd9;
+  --translucent-black: #00000066;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+	padding: 0;
+}
+
+body {
+  margin: 0;
+  /* Containing block for the full-bleed hero. */
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: var(--black);
+  min-height: 100vh;
+  /* Sticky footer: the rows stack, and main takes the slack. */
+  display: flex;
+  flex-direction: column;
+  /* Sunset sky for the small view! */
+  background: linear-gradient(to bottom, var(--light-blue), var(--light-pink));
+  background: linear-gradient(to bottom in oklab, var(--light-blue), var(--light-pink));
+}
+
+header {
+  background-color: var(--purple);
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+header span {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column; /* the open menu stacks; the wide view switches to a row */
+  gap: 0; 
+}
+
+nav a {
+	display: none;
+	padding: 0.75rem;
+	text-align: left;
+	text-decoration: none;
+	color: var(--white);
+	font-weight: 700;
+	transition: 0.5s;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
+  border-radius: 8px;
+}
+
+nav a:hover,
+nav a:active {
+	color: var(--white);
+	background-color: var(--black);
+}
+
+/* The filter currently on screen*/
+nav a[aria-current="page"] {
+	background-color: var(--black);
+}
+
+nav.show a {
+	display: block;
+}
+
+/* Small view: In my version, the open menu takes the whole bar width, left-aligned. */
+nav.show {
+	flex: 1;
+}
+
+/* Small-view only*/
+header:has(nav.show) span {
+	display: none;
+}
+
+#menu.show::before {
+	content: "X";
+	content: "X" / ""; 
+}
+
+/* Mobile View */
+#menu {
+	display: block;
+	appearance: none; 
+	background: none;
+	border: none;
+	cursor: pointer;
+	text-align: right;
+	font-family: inherit; 
+	font-size: 2rem;
+	font-weight: 700;
+	padding: 0.5rem 0.75rem;
+	color: var(--white);
+}
+
+#menu::before {
+	content: "≡";
+	content: "≡" / "";
+}
+
+main {
+  margin: 0 auto 1rem auto;
+  width: 100%;
+  max-width: 1024px;
+  flex: 1; /* absorbs leftover height so the footer sits at the bottom */
+}
+
+.title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.hero {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+/* it seems picture is inline by default, which leaves an empty line box above the
+   image. Block display removes it. */
+.hero picture {
+  display: block;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr; /* one column on small screens */
+  gap: 1rem;
+}
+
+.card {
+  background-color: var(--translucent-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--translucent-black);
+  padding: 1rem;
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: var(--dark-gray);
+}
+
+.card p {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  color: var(--gray);
+}
+
+.card p span {
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.card img {
+  display: block; /* drops the inline-baseline gap under the image */
+  width: 100%;
+  height: auto;
+} 
+
+footer {
+  background-color: var(--purple);
+  color: var(--white);
+  text-align: center;
+  padding: 10px 20px;
+}
+
+footer h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+/* Media Query for wider than mobile viewports. */
+@media only screen and (min-width: 40em) {
+	nav {
+		flex-direction: row;
+		gap: 3rem;
+	}
+
+	nav a {
+		display: block;
+		/* change state in small view */
+		flex: 1 1 100%;
+		text-align: center;
+	}
+
+	header:has(nav.show) span {
+		display: block;
+	}
+
+	nav.show {
+		flex: 0 1 auto;
+	}
+
+	#menu {
+		display: none;
+	}
+
+	/* Sky gradient dropped on large viewports. */
+	body {
+		background: var(--white);
+	}
+
+	main {
+		margin-top: 1rem;
+	}
+
+	.hero {
+		position: absolute;
+		inset: 0;
+		/* Negative index paints the hero below the page's in-flow content. */
+		z-index: -1;
+		margin-bottom: 0;
+	}
+
+	.hero picture {
+		height: 100%;
+	}
+
+	.hero img {
+		border-bottom: 0;
+	}
+
+	.card {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.gallery {
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	}
+}
