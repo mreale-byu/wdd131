@@ -1,9 +1,9 @@
 
 :root {
-  --desk: #3D342D;
-  --walnut: #4C4038;
+  --desk: #342C26;
+  --walnut: #40362F;
   --lit-walnut: #615144;
-  --window: #3A4A5A;
+  --window: #26303B;
   --window-line: #506477;
   --putty: #F5EEDF;
   --faded: #D2C7B2;
@@ -219,10 +219,10 @@ tbody th { font-weight: 400; }
 }
 
 /* Color swatches in the palette table */
-.swatch--desk { background: #3D342D; }
-.swatch--walnut { background: #4C4038; }
+.swatch--desk { background: #342C26; }
+.swatch--walnut { background: #40362F; }
 .swatch--lit-walnut { background: #615144; }
-.swatch--window { background: #3A4A5A; }
+.swatch--window { background: #26303B; }
 .swatch--putty { background: #F5EEDF; }
 .swatch--faded { background: #D2C7B2; }
 .swatch--amber { background: #F0AE48; }
