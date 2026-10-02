@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="WDD 131: Dynamic Web Fundamentals - Site plan for the Retrocomputing Gallery.">
+<meta name="keywords" content="retrocomputing, vintage computing, computer history, 1980s computers, 8-bit computers, home computers, Apple IIe, vintage software, retro hardware, site plan, WDD 131">
+<meta name="author" content="Mauricio Reale">
+<title>Site plan – WDD 131 Project – Retrocomputing Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/siteplan.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <p class="brand"><span class="led" aria-hidden="true"></span>The Retrocomputing Gallery</p>
+    <nav class="toc" aria-label="Site plan sections">
+      <ul>
+        <li><a href="#name">Site name</a></li>
+        <li><a href="#purpose">Purpose</a></li>
+        <li><a href="#scenarios">Scenarios</a></li>
+        <li><a href="#sitemap">Site map</a></li>
+        <li><a href="#wireframe">Wireframe</a></li>
+        <li><a href="#colors">Colors</a></li>
+        <li><a href="#typography">Typography</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap intro">
+    <h1>Site plan</h1>
+    <p class="lede">The plan for the retrocomputing site project</p>
+  </div>
+
+  <section id="name" class="plan-section" aria-labelledby="name-title">
+    <div class="wrap">
+      <h2 id="name-title">Site name</h2>
+      <p>The site is called <cite>The Retrocomputing Gallery</cite>.</p>
+      <p><dfn>Retrocomputing</dfn> is the practice of using, restoring and studying computer hardware and software from earlier eras.</p>
+      <p>That word was chosen because it names the subject and is the term the community itself already uses, so a visitor knows what the site is about.</p>
+      <p><i>Gallery</i> was added because machines and software are presented one piece at a time, each with a photo, a year, a maker and a short description, the way an exhibit is labelled.</p>
+      <p>The two words together describe both the topic and the way it is shown.</p>
+    </div>
+  </section>
+
+  <section id="purpose" class="plan-section plan-section--alt" aria-labelledby="purpose-title">
+    <div class="wrap">
+      <h2 id="purpose-title">Purpose</h2>
+      <p>The Retrocomputing Gallery is dedicated to showcasing some significant pieces of vintage computing technology, providing enthusiasts and researchers with a comprehensive resource for historical computing artifacts and information.</p>
+      <p class="muted">Period covered is 1980 to 1989.</p>
+    </div>
+  </section>
+
+  <section id="scenarios" class="plan-section" aria-labelledby="scenarios-title">
+    <div class="wrap">
+      <h2 id="scenarios-title">Scenarios</h2>
+      <p>Each question a visitor might bring and where it is (hopefully) answered.</p>
+      <div class="table-wrap" role="region" aria-labelledby="scenarios-caption" tabindex="0">
+        <table>
+          <caption id="scenarios-caption">Visitor questions and where the site answers them</caption>
+          <thead>
+            <tr><th scope="col">Question</th><th scope="col">Answered on</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">What is retrocomputing?</th><td>Home, intro section</td></tr>
+            <tr><th scope="row">What period of time does this site cover?</th><td>Home, intro section</td></tr>
+            <tr><th scope="row">What technologies were important milestones in that period?</th><td>Timeline, with links to Machines and Software</td></tr>
+            <tr><th scope="row">What companies were influential in that period?</th><td>Machines, Makers section, and tags on the Timeline</td></tr>
+            <tr><th scope="row">What are some notable computer models from that period?</th><td>Machines</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="sitemap" class="plan-section plan-section--alt" aria-labelledby="sitemap-title">
+    <div class="wrap">
+      <h2 id="sitemap-title">Site map</h2>
+      <p>Five pages. Four are in the main navigation. Feedback is a utility page (to meet the form usage requirement).</p>
+      <div class="table-wrap" role="region" aria-labelledby="sitemap-caption" tabindex="0">
+        <table>
+          <caption id="sitemap-caption">Pages, files and main content</caption>
+          <thead>
+            <tr><th scope="col">Page</th><th scope="col">File</th><th scope="col">Main content</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Home</th><td class="mono">index.html</td><td>Hero, intro to retrocomputing and the period, three category cards</td></tr>
+            <tr><th scope="row">Machines</th><td class="mono">machines.html</td><td>Notable computers (including the Apple IIe) with photo, year, maker and specs; Makers section</td></tr>
+            <tr><th scope="row">Software</th><td class="mono">software.html</td><td>Operating systems, productivity programs, languages and games</td></tr>
+            <tr><th scope="row">Timeline (1980–89)</th><td class="mono">timeline.html</td><td>Year-by-year milestones tagged hardware, software or company</td></tr>
+            <tr><th scope="row">Feedback</th><td class="mono">feedback.html</td><td>Feedback form with validation and a thank-you message after sending</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Shared layout</h3>
+      <ul class="plain">
+        <li>Header with logo and a four-item navigation that fits in one row on phones. (Should I consider using a hamburger menu?)</li>
+        <li>Footer with site description, image credits, etc.</li>
+        <li>Mobile first: one column on phones, two from 640 px, three from 1024 px; content width up to 1120 px.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="wireframe" class="plan-section" aria-labelledby="wireframe-title">
+    <div class="wrap">
+      <h2 id="wireframe-title">Wireframe Sketches (Mobile and Desktop)</h2>
+      <p>Home page structure</p>
+      <figure>
+        <img src="images/wireframe.webp" width="3280" height="3190" loading="lazy"
+             alt="Black and white wireframe of the home page on mobile and desktop. From top: header with logo and four navigation items; hero with boot line, hero text, two lines of subtext, a primary button and a hero image; an intro section with a section title, paragraph and two facts; a section of three category cards styled as disk labels, each with a title, text and link; and a footer with site name, description, image credits, feedback link and back to top.">
+        <figcaption>Mobile and Desktop wireframes (note: work in progress)</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="colors" class="plan-section plan-section--alt" aria-labelledby="colors-title">
+    <div class="wrap">
+      <h2 id="colors-title">Colors</h2>
+      <p>This must look like a dim lamp atmosphere: "Amber" is for actions and highlights; "Dusk Blue" is for links, dates and specs.</p>
+      <figure>
+        <img src="images/colors.webp" width="2400" height="1167" loading="lazy"
+             alt="Color palette swatches: four warm dark surfaces, two light text colors, lamp amber and dusk blue accents, and a red power LED dot. Every value is listed in the table below.">
+        <figcaption>Color palette (Still work in progress).</figcaption>
+      </figure>
+      <div class="table-wrap" role="region" aria-labelledby="colors-caption" tabindex="0">
+        <table>
+          <caption id="colors-caption">Color tokens and where they are used</caption>
+          <thead>
+            <tr><th scope="col">Name</th><th scope="col">Value (Hex)</th><th scope="col">Where is it used</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row"><span class="swatch swatch--desk" aria-hidden="true"></span>Afternoon desk</th><td class="mono">#3D342D</td><td>Page background</td></tr>
+            <tr><th scope="row"><span class="swatch swatch--walnut" aria-hidden="true"></span>Walnut</th><td class="mono">#4C4038</td><td>Cards, panels</td></tr>
+            <tr><th scope="row"><span class="swatch swatch--lit-walnut" aria-hidden="true"></span>Lit walnut</th><td class="mono">#615144</td><td>Borders, dividers</td></tr>
+            <tr><th scope="row"><span class="swatch swatch--window" aria-hidden="true"></span>Window night</th><td class="mono">#3A4A5A</td><td>Alternate sections, footer</td></tr>
+            <tr><th scope="row"><span class="swatch swatch--putty" aria-hidden="true"></span>Putty</th><td class="mono">#F5EEDF</td><td>Body text, headings</td></tr>
+            <tr><th scope="row"><span class="swatch swatch--faded" aria-hidden="true"></span>Faded label</th><td class="mono">#D2C7B2</td><td>Secondary text, captions</td></tr>
+            <tr><th scope="row"><span class="swatch swatch--amber" aria-hidden="true"></span>Lamp amber</th><td class="mono">#F0AE48</td><td>Buttons, highlights, focus ring</td></tr>
+            <tr><th scope="row"><span class="swatch swatch--dusk" aria-hidden="true"></span>Dusk blue</th><td class="mono">#9DC0E3</td><td>Links, dates, specs</td></tr>
+            <tr><th scope="row"><span class="swatch swatch--coral" aria-hidden="true"></span>Soft coral</th><td class="mono">#F4A08F</td><td>Form error messages</td></tr>
+            <tr><th scope="row"><span class="swatch swatch--led" aria-hidden="true"></span>Power LED</th><td class="mono">#D9453B</td><td>Logo dot only, never text</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="typography" class="plan-section" aria-labelledby="typography-title">
+    <div class="wrap">
+      <h2 id="typography-title">Typography</h2>
+      <figure>
+        <img src="images/typography.webp" width="2400" height="1656" loading="lazy"
+             alt="This image shows the site typography.">
+        <figcaption>Typography</figcaption>
+      </figure>
+      <div class="table-wrap" role="region" aria-labelledby="type-caption" tabindex="0">
+        <table>
+          <caption id="type-caption">Type styles</caption>
+          <thead>
+            <tr><th scope="col">Style</th><th scope="col">Font and weight</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Display (h1)</th><td>Roboto Thin 100</td></tr>
+            <tr><th scope="row">Section heading (h2)</th><td>Roboto Light 300</td></tr>
+            <tr><th scope="row">Card heading (h3)</th><td>Roboto Light 300</td></tr>
+            <tr><th scope="row">Body</th><td>Roboto Light 300</td></tr>
+            <tr><th scope="row">Navigation, buttons, labels</th><td>Roboto Regular 400</td></tr>
+            <tr><th scope="row">Data: boot lines, dates, specs</th><td>Roboto Mono Regular 400</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Retrocomputing Gallery, site plan. Luiz MR Lemos</p>
+    <p>Updated October 2026.</p>
+    <p><a href="#main">Back to top</a></p>
+  </div>
+</footer>
+</body>
+</html>
