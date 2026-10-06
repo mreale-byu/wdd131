@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Product Review page example using semantic HTML elements, CSS and JS.">
+    <meta name="author" content="Luiz MR Lemos">
+    <meta name="keywords" content="Product Review, HTML, CSS, JavaScript">
+    <title>Product Review - Luiz MR Lemos</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form class="review" method="get" action="review.html">
+
+            <label class="field" for="product">Product Name
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Choose a Product ...</option>
+                </select>
+            </label>
+
+            <fieldset class="field">
+                <legend>Overall Rating</legend>
+                <!-- Source order runs 5 -> 1 on purpose -->
+                <div class="rating">
+                    <input type="radio" id="rating5" name="rating" value="5" aria-label="5 stars" required>
+                    <label for="rating5"><span class="star" aria-hidden="true"></span></label>
+
+                    <input type="radio" id="rating4" name="rating" value="4" aria-label="4 stars">
+                    <label for="rating4"><span class="star" aria-hidden="true"></span></label>
+
+                    <input type="radio" id="rating3" name="rating" value="3" aria-label="3 stars">
+                    <label for="rating3"><span class="star" aria-hidden="true"></span></label>
+
+                    <input type="radio" id="rating2" name="rating" value="2" aria-label="2 stars">
+                    <label for="rating2"><span class="star" aria-hidden="true"></span></label>
+
+                    <input type="radio" id="rating1" name="rating" value="1" aria-label="1 star">
+                    <label for="rating1"><span class="star" aria-hidden="true"></span></label>
+                </div>
+            </fieldset>
+
+            <label class="field" for="installed">Date of Installation
+                <input type="date" id="installed" name="installed" required>
+            </label>
+
+            <fieldset class="field">
+                <legend>Which features did you find useful in the product?
+                    <span class="hint">(Check all that apply)</span>
+                </legend>
+                <div class="checks">
+                    <input type="checkbox" id="durability" name="features" value="Durability">
+                    <label for="durability">Durability</label>
+
+                    <input type="checkbox" id="ease" name="features" value="Ease of Use">
+                    <label for="ease">Ease of Use</label>
+
+                    <input type="checkbox" id="performance" name="features" value="Performance">
+                    <label for="performance">Performance</label>
+
+                    <input type="checkbox" id="design" name="features" value="Design">
+                    <label for="design">Design</label>
+                </div>
+            </fieldset>
+
+            <label class="field" for="written">Written Review <span class="optional">(Optional)</span>
+                <textarea id="written" name="written" rows="6"></textarea>
+            </label>
+
+            <label class="field" for="username">Your Name <span class="optional">(Optional)</span>
+                <input type="text" id="username" name="username">
+            </label>
+
+            <button type="submit">Post Review</button>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>©️<span id="currentyear"></span> 😊 Luiz MR Lemos, Brazil</p>
+        <p>Last modification: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,234 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  background-color: #d6d0da;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #5414c9;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+main {
+  margin: 1rem auto 1rem auto;
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 800px;
+  flex: 1;
+}
+
+footer {
+  background-color: #5414c9;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+/* ---------- Review form ---------- */
+
+.review,
+.thanks {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #c9c4ce;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #00000026;
+  padding: 1.5rem;
+}
+
+.review {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.review .field {
+  display: block;
+  font-weight: 700;
+}
+
+.review fieldset.field {
+  border: none;
+  padding: 0;
+  min-inline-size: 0;
+}
+
+.review legend {
+  padding: 0;
+  font-weight: 700;
+}
+
+.review .hint {
+  display: block;
+  font-style: italic;
+}
+
+.review .optional {
+  color: #1e3a8a;
+  font-size: 0.85rem;
+}
+
+.review select,
+.review input[type="date"],
+.review input[type="text"],
+.review textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.6rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #767676;
+  border-radius: 4px;
+}
+
+.review textarea {
+  resize: vertical;
+}
+
+.review :focus-visible {
+  outline: 2px solid #5414c9;
+  outline-offset: 2px;
+}
+
+.review .rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.review .rating input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.review .rating label {
+  cursor: pointer;
+  line-height: 0;
+  color: #5414c9;
+  border-radius: 4px;
+}
+
+.review .rating .star {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background: url("../images/star-empty.svg") center / contain no-repeat;
+}
+
+.review .rating input[type="radio"]:checked ~ label .star {
+  background-image: url("../images/star-filled.svg");
+}
+
+.review .rating input[type="radio"]:focus-visible + label {
+  outline: 2px solid #5414c9;
+  outline-offset: 2px;
+}
+
+.review input[type="checkbox"] {
+  accent-color: #5414c9;
+  cursor: pointer;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.review .checks {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-top: 0.6rem;
+}
+
+.review .checks label {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.review button,
+.thanks .button {
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  color: #000000;
+  background-color: #efefef;
+  border: 1px solid #767676;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.review button:hover,
+.thanks .button:hover {
+  background-color: #5414c9;
+  color: #ffffff;
+  border-color: #5414c9;
+}
+
+/* ---------- Thank you card ---------- */
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 70vh;
+}
+
+.thanks img {
+  width: 6.375rem;
+  height: auto;
+  margin-top: 4rem;
+}
+
+.thanks h2 {
+  color: #5414c9;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.thanks .button {
+  display: block;
+  width: 100%;
+  margin-top: auto;
+}
