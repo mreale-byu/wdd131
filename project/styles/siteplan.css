@@ -1,3 +1,5 @@
+/* Retrocomputing Gallery: site plan styles
+   Palette: After Hours, dim afternoon. Type: Roboto and Roboto Mono. */
 
 :root {
   --desk: #342C26;
@@ -6,6 +8,7 @@
   --window: #26303B;
   --window-line: #506477;
   --putty: #F5EEDF;
+  --coral: #F7BCB0;
   --faded: #D2C7B2;
   --amber: #F0AE48;
   --dusk: #9DC0E3;
@@ -116,6 +119,21 @@ a:hover { color: var(--putty); }
 
 /* Intro */
 .intro { padding-block: var(--space-5) var(--space-4); }
+.boot {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--dusk);
+}
+.boot::after {
+  content: "";
+  display: inline-block;
+  width: 0.6em;
+  height: 1.1em;
+  margin-left: 0.25em;
+  vertical-align: -0.2em;
+  background: var(--amber);
+}
 h1 {
   margin: 0 0 var(--space-2);
   font-weight: 100;
@@ -156,11 +174,7 @@ ul.plain { margin: 0; padding-left: 1.25rem; }
 ul.plain li + li { margin-top: 0.375rem; }
 .muted { color: var(--faded); }
 .mono { font-family: var(--font-mono); font-size: 0.875rem; }
-cite {
-  font-style: normal;
-  font-weight: 400;
-  color: var(--amber);
-}
+code { font-family: var(--font-mono); font-size: 0.875em; }
 
 /* Figures */
 figure { margin: var(--space-3) 0; }
@@ -218,17 +232,32 @@ tbody th { font-weight: 400; }
   margin-right: 0.5rem;
 }
 
-/* Color swatches in the palette table */
-.swatch--desk { background: #342C26; }
-.swatch--walnut { background: #40362F; }
-.swatch--lit-walnut { background: #615144; }
-.swatch--window { background: #26303B; }
-.swatch--putty { background: #F5EEDF; }
-.swatch--faded { background: #D2C7B2; }
-.swatch--amber { background: #F0AE48; }
-.swatch--dusk { background: #9DC0E3; }
-.swatch--coral { background: #F4A08F; }
-.swatch--led { background: #D9453B; }
+/* Color swatches in the palette table: read from the tokens above, so :root is the only place a hex value lives */
+.swatch--desk { background: var(--desk); }
+.swatch--walnut { background: var(--walnut); }
+.swatch--lit-walnut { background: var(--lit-walnut); }
+.swatch--window { background: var(--window); }
+.swatch--window-line { background: var(--window-line); }
+.swatch--putty { background: var(--putty); }
+.swatch--faded { background: var(--faded); }
+.swatch--amber { background: var(--amber); }
+.swatch--dusk { background: var(--dusk); }
+.swatch--coral { background: var(--coral); }
+.swatch--led { background: var(--led); }
+
+/* Principles */
+.principles {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr;
+}
+.principles > div {
+  background: var(--walnut);
+  border: 1px solid var(--lit-walnut);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+.principles h3 { margin-top: 0; }
 
 /* Footer */
 .site-footer {
@@ -239,3 +268,12 @@ tbody th { font-weight: 400; }
   font-size: 0.9375rem;
 }
 .site-footer p { margin: 0 0 var(--space-1); }
+
+/* Larger screens */
+@media (min-width: 48rem) {
+  .principles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Machines – The Retrocomputing Gallery</title>
+<meta name="description" content="Nine notable personal computers of the 1980s, from the IBM PC to the Atari ST, with their processors, memory, launch prices and the companies that built them.">
+<meta name="keywords" content="WDD 131, retrocomputing, 1980s computers, vintage computers, IBM PC, Commodore 64, Apple IIe, Macintosh, Amiga, ZX Spectrum, BBC Micro">
+<meta name="author" content="Luiz MR Lemos">
+<meta name="theme-color" content="#342C26">
+<meta property="og:title" content="Machines – The Retrocomputing Gallery">
+<meta property="og:description" content="Notable personal computers of the 1980s, with specs and the companies that built them.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/og-machines.webp">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+<script src="scripts/main.js" defer></script>
+<script src="scripts/machines.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="led" aria-hidden="true"></span>Retrocomputing Gallery</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="machines.html" aria-current="page">Machines</a></li>
+        <li><a href="software.html">Software</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="credits.html">Credits</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="machines-title">
+    <div class="wrap">
+      <div>
+        <p class="boot" aria-hidden="true">A&gt;DIR MACHINES</p>
+        <h1 id="machines-title">Machines</h1>
+        <p class="lede">Nine computers that shaped the decade, from the machine that defined the office to the one that ended up in recording studios. Specifications are as sold at launch.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="grid-title">
+    <div class="wrap">
+      <h2 id="grid-title">The collection</h2>
+
+      <div class="toolbar" id="machine-toolbar" hidden>
+        <label for="sort-machines">Sort by</label>
+        <select id="sort-machines">
+          <option value="year">Year</option>
+          <option value="name">Name</option>
+          <option value="maker">Maker</option>
+        </select>
+        <p class="status" id="machine-status" role="status"></p>
+      </div>
+
+      <noscript>
+        <p>The machine list is built with JavaScript, which is switched off in this browser. The <a href="software.html">Software</a> and <a href="timeline.html">Timeline</a> pages work without it, and both cover the same machines.</p>
+      </noscript>
+
+      <div class="machines" id="machine-grid"></div>
+    </div>
+  </section>
+
+  <section class="section section--alt" aria-labelledby="makers-title">
+    <div class="wrap split">
+      <h2 id="makers-title">Makers</h2>
+      <div>
+        <p>Seven companies built the machines above. Four more built the processors inside them, and those chips did as much to shape the decade as the computers that carried them.</p>
+        <h3>Machines</h3>
+        <ul class="makers">
+          <li>IBM</li>
+          <li>Apple</li>
+          <li>Commodore</li>
+          <li>Sinclair</li>
+          <li>Acorn</li>
+          <li>Atari</li>
+          <li>Compaq</li>
+        </ul>
+        <h3>Processors</h3>
+        <ul class="makers">
+          <li>Intel</li>
+          <li>Motorola</li>
+          <li>Zilog</li>
+          <li>MOS Technology</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="feedback-title">
+    <div class="wrap split">
+      <h2 id="feedback-title">Feedback welcome</h2>
+      <div>
+        <p>Nine machines is a thin slice of a crowded decade. If one you remember belongs here, or a specification looks wrong, send feedback and it will be checked.</p>
+        <a class="button button--primary" href="feedback.html">Send feedback</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h2>The Retrocomputing Gallery</h2>
+      <p>An educational gallery of personal computing from 1980 to 1989.</p>
+      <p class="mono" id="footer-meta">Updated October 2026</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="feedback.html">Send feedback</a></li>
+        <li><a href="#main">Back to top</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

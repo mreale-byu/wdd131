@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Retrocomputing Gallery">
+  <rect width="32" height="32" rx="6" fill="#342C26"/>
+  <circle cx="7.5" cy="7.5" r="2.5" fill="#D9453B"/>
+  <rect x="5" y="19" width="14" height="3" rx="1.5" fill="#D2C7B2"/>
+  <rect x="21" y="14" width="6" height="13" rx="1" fill="#F0AE48"/>
+</svg>

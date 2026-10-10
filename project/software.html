@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Software &#8211; The Retrocomputing Gallery</title>
+<meta name="description" content="Eighteen programs people actually ran in the 1980s: operating systems, productivity tools, programming languages and games, from CP/M to SimCity.">
+<meta name="keywords" content="WDD 131, retrocomputing, 1980s software, CP/M, MS-DOS, WordStar, Lotus 1-2-3, Turbo Pascal, BASIC, Elite, Tetris, SimCity">
+<meta name="author" content="Luiz MR Lemos">
+<meta name="theme-color" content="#342C26">
+<meta property="og:title" content="Software &#8211; The Retrocomputing Gallery">
+<meta property="og:description" content="Operating systems, productivity tools, languages and games of the 1980s.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/og-software.webp">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+<script src="scripts/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="led" aria-hidden="true"></span>Retrocomputing Gallery</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="machines.html">Machines</a></li>
+        <li><a href="software.html" aria-current="page">Software</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="credits.html">Credits</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="software-title">
+    <div class="wrap">
+      <div>
+        <p class="boot" aria-hidden="true">A&gt;DIR SOFTWARE</p>
+        <h1 id="software-title">Software</h1>
+        <p class="lede">Eighteen programs people actually loaded off the floppy, in four groups. Several were written in the 1970s and simply kept going; those carry a &ldquo;Since&rdquo; date.</p>
+        <nav aria-label="Jump to a group">
+          <ul class="jump">
+            <li><a href="#operating-systems">Operating systems</a></li>
+            <li><a href="#productivity">Productivity</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#games">Games</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="operating-systems" aria-labelledby="operating-systems-title">
+    <div class="wrap">
+      <div class="band-head">
+        <h2 id="operating-systems-title">Operating systems</h2>
+        <a href="#main">Back to top</a>
+      </div>
+      <p>The program that loads first and runs everything else. In this decade the choice of operating system decided which software you could buy.</p>
+      <div class="programs">
+        <article class="card program">
+          <img src="images/sw-cpm.webp" width="900" height="574" loading="lazy" alt="A CP/M 2.2 session in green on black: the Digital Research copyright banner, a custom ESP80 BIOS line, and a directory listing of 59 files on drive A.">
+          <div class="body">
+            <p class="meta">Since 1974 · 8080 and Z80 machines</p>
+            <h3>CP/M</h3>
+            <p>Gary Kildall&rsquo;s CP/M gave every 8080 and Z80 machine the same disk commands and file layout, so a program written for one could run on another. It was the standard business system until MS-DOS took its place.</p>
+          </div>
+        </article>
+        <article class="card program">
+          <img src="images/sw-msdos.webp" width="640" height="400" loading="lazy" alt="An MS-DOS boot sequence on a green monochrome monitor, ending at the C prompt.">
+          <div class="body">
+            <p class="meta">1981 · IBM PC and compatibles</p>
+            <h3>MS-DOS</h3>
+            <p>IBM licensed MS-DOS from Microsoft instead of buying it outright, which left Microsoft free to sell the same system to everyone who cloned the PC. That one contract built the company.</p>
+          </div>
+        </article>
+        <article class="card program">
+          <img src="images/sw-mac-system.webp" width="512" height="342" loading="lazy" alt="The Macintosh System 1 desktop: a menu bar across the top, the Apple disk window listing Font Mover, Disk Copy and Fonts, and the System Folder open below it.">
+          <div class="body">
+            <p class="meta">1984 · Macintosh</p>
+            <h3>Mac System 1</h3>
+            <p>The first Macintosh system software had no command line at all, only windows, icons, folders and a menu bar. It fitted into a machine with 128 KB of memory.</p>
+          </div>
+        </article>
+        <article class="card program">
+          <img src="images/sw-amigaos.webp" width="640" height="400" loading="lazy" alt="The AmigaOS Workbench 1.1 desktop in blue and white: an Extras window holding Amiga Tutor and AmigaBASIC icons, a BasicDemos window open beside it, and a Trashcan on the desktop.">
+          <div class="body">
+            <p class="meta">1985 · Amiga</p>
+            <h3>AmigaOS</h3>
+            <p>AmigaOS ran several programs at once, properly, on a machine with 256 KB of memory. Its Workbench desktop and its command shell sat side by side, both fully usable.</p>
+          </div>
+        </article>
+        <article class="card program">
+          <img src="images/sw-windows.webp" width="700" height="383" loading="lazy" alt="The MS-DOS Executive window in Windows 1.0, a plain list of program file names.">
+          <div class="body">
+            <p class="meta">1985 · IBM PC and compatibles</p>
+            <h3>Windows 1.0</h3>
+            <p>Microsoft&rsquo;s first Windows was a graphical shell sitting on top of MS-DOS, with tiled windows that were not allowed to overlap. It sold poorly, but the line it started did not stop.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="productivity" aria-labelledby="productivity-title">
+    <div class="wrap">
+      <div class="band-head">
+        <h2 id="productivity-title">Productivity</h2>
+        <a href="#main">Back to top</a>
+      </div>
+      <p>The software that justified the price of the hardware, and the reason offices bought personal computers at all.</p>
+      <div class="programs">
+        <article class="card program">
+          <img src="images/sw-wordstar.webp" width="700" height="438" loading="lazy" alt="A WordStar 4 editing screen, its menu of commands listed above the document area.">
+          <div class="body">
+            <p class="meta">Since 1978 · CP/M, later MS-DOS</p>
+            <h3>WordStar</h3>
+            <p>The word processor that taught a generation its control-key shortcuts. Writers kept using it long after it had lost the market, some of them for decades.</p>
+          </div>
+        </article>
+        <article class="card program">
+          <img src="images/sw-visicalc.webp" width="560" height="384" loading="lazy" alt="A VisiCalc spreadsheet in green on black, with columns for item, quantity, unit price and cost, and a total at the foot.">
+          <div class="body">
+            <p class="meta">Since 1979 · Apple II</p>
+            <h3>VisiCalc</h3>
+            <p>The first spreadsheet, and the first program people bought a computer in order to run. It turned the Apple II from a hobbyist machine into something a business could justify.</p>
+          </div>
+        </article>
+        <article class="card program">
+          <img src="images/sw-dbase.webp" width="720" height="400" loading="lazy" alt="A dBase III record edit screen: named fields for a payroll record filled in beside a box listing the cursor and editing keys.">
+          <div class="body">
+            <p class="meta">1984 · MS-DOS</p>
+            <h3>dBase III</h3>
+            <p>dBase gave small businesses a database they could build and program themselves, with no mainframe and no department to run it. dBase II arrived in 1980; this successor took the PC market and left behind a file format that outlived the product.</p>
+          </div>
+        </article>
+        <article class="card program">
+          <img src="images/sw-lotus.webp" width="700" height="419" loading="lazy" alt="A Lotus 1-2-3 spreadsheet filled with figures, with the command menu across the top.">
+          <div class="body">
+            <p class="meta">1983 · IBM PC</p>
+            <h3>Lotus 1-2-3</h3>
+            <p>A spreadsheet fast enough to feel instant, because it was written in assembly language for the IBM PC and nothing else. It sold the PC to business more effectively than IBM managed to.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="languages" aria-labelledby="languages-title">
+    <div class="wrap">
+      <div class="band-head">
+        <h2 id="languages-title">Languages</h2>
+        <a href="#main">Back to top</a>
+      </div>
+      <p>How people told the machines what to do. Most of these were already old by 1980, and all of them were in daily use through the decade.</p>
+      <div class="programs">
+        <article class="card program">
+          <img src="images/sw-basic.webp" width="900" height="528" loading="lazy" alt="A BASIC program listing in green on black: the opening lines of QUBIC, a four-by-four-by-four noughts and crosses game published by Creative Computing.">
+          <div class="body">
+            <p class="meta">Since 1964 · Built into most home computers</p>
+            <h3>BASIC</h3>
+            <p>Most home computers started up into BASIC, so the first thing on screen was a prompt waiting for a program. For millions of people it was the first programming language, and often the only one.</p>
+          </div>
+        </article>
+        <article class="card program">
+          <img src="images/sw-forth.webp" width="900" height="633" loading="lazy" alt="Forth source in a code editor: notes on which Forth systems the code runs under, then colon definitions building cons-cell words such as car!, cdr!, car@, cdr@ and cons out of simpler ones.">
+          <div class="body">
+            <p class="meta">Since 1970 · Jupiter Ace and most micros</p>
+            <h3>Forth</h3>
+            <p>Charles Moore&rsquo;s language fitted into very little memory and let you extend it with words of your own, which suited machines that had nothing to spare. In 1982 the Jupiter Ace shipped with Forth in ROM instead of BASIC.</p>
+          </div>
+        </article>
+        <article class="card program">
+          <img src="images/sw-c.webp" width="900" height="593" loading="lazy" alt="C source in cyan on black: the CP/M header file CPM.H, declaring the file control block structure and the BDOS calls, compiled with HI-TECH C on a Z80.">
+          <div class="body">
+            <p class="meta">Since 1972 · Unix, later personal computers</p>
+            <h3>C</h3>
+            <p>C sat close enough to the hardware to be fast and far enough from it to move between machines. Nearly everything written since has been built either with it or on top of it.</p>
+          </div>
+        </article>
+        <article class="card program">
+          <img src="images/sw-turbo-pascal.webp" width="700" height="389" loading="lazy" alt="The blue Turbo Pascal editor with its file menu open over a code window.">
+          <div class="body">
+            <p class="meta">1983 · CP/M and MS-DOS</p>
+            <h3>Turbo Pascal</h3>
+            <p>Borland sold a compiler, an editor and a linker as one program for US$49.95, when rivals were charging hundreds. It compiled fast enough that you stopped thinking about compiling.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="games" aria-labelledby="games-title">
+    <div class="wrap">
+      <div class="band-head">
+        <h2 id="games-title">Games</h2>
+        <a href="#main">Back to top</a>
+      </div>
+      <p>What the machines did after hours, and for many households the reason there was a computer in the room at all.</p>
+      <div class="programs">
+        <article class="card program">
+          <img src="images/sw-elite.webp" class="pixel" width="256" height="248" loading="lazy" alt="The wireframe view from Elite on the BBC Micro: a many-sided planet outline, a ship ahead, and the red and yellow instrument console across the bottom.">
+          <div class="body">
+            <p class="meta">1984 · BBC Micro</p>
+            <h3>Elite</h3>
+            <p>Elite fitted eight galaxies, wireframe 3D ships and open-ended trading into a 32 KB machine, with no set objective beyond staying alive and getting richer. Almost nothing else looked like it.</p>
+          </div>
+        </article>
+        <article class="card program">
+          <img src="images/sw-kings-quest.webp" class="pixel" width="316" height="199" loading="lazy" alt="The opening scene of King&rsquo;s Quest: a stone castle with pennants and a drawbridge, and the player character walking in from the right.">
+          <div class="body">
+            <p class="meta">1984 · IBM PCjr</p>
+            <h3>King&rsquo;s Quest</h3>
+            <p>Sierra&rsquo;s adventure let you walk a character around drawn scenes instead of reading descriptions of them. IBM commissioned it to show what the PCjr could do.</p>
+          </div>
+        </article>
+        <article class="card program">
+          <img src="images/sw-tetris.webp" class="pixel" width="407" height="245" loading="lazy" alt="The first version of Tetris on an Electronika 60: the playing field drawn out of text characters, with Russian labels for lines, level and score, and the key list beside it.">
+          <div class="body">
+            <p class="meta">1984 · Electronika 60</p>
+            <h3>Tetris</h3>
+            <p>Alexey Pajitnov wrote it at a Soviet research centre on a machine with no graphics at all, building the blocks out of text characters. It reached most players in the West around 1988 and 1989.</p>
+          </div>
+        </article>
+        <article class="card program">
+          <img src="images/sw-simcity.webp" width="900" height="675" loading="lazy" alt="A built-up city in Micropolis, the release of SimCity&rsquo;s original source code: zoned blocks, roads and rail, with the budget and map tools open.">
+          <div class="body">
+            <p class="meta">1989 · Amiga and Macintosh</p>
+            <h3>SimCity</h3>
+            <p>A game with no way to win: you zone, build, tax and watch what the city does with it. Publishers turned it down for years on exactly that ground.</p>
+          </div>
+        </article>
+        <article class="card program">
+          <img src="images/sw-prince-of-persia.webp" width="700" height="480" loading="lazy" alt="A Prince of Persia screen on the Apple II, the player character in a torch-lit dungeon.">
+          <div class="body">
+            <p class="meta">1989 · Apple II</p>
+            <h3>Prince of Persia</h3>
+            <p>Jordan Mechner filmed his brother running and jumping, then traced the frames, so the character moved with a weight no other platform game of the time had.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="feedback-title">
+    <div class="wrap split">
+      <h2 id="feedback-title">Feedback welcome</h2>
+      <div>
+        <p>Eighteen programs out of many thousands. If something important is missing, or a date or platform looks wrong, send feedback and it will be put right.</p>
+        <a class="button button--primary" href="feedback.html">Send feedback</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h2>The Retrocomputing Gallery</h2>
+      <p>An educational gallery of personal computing from 1980 to 1989.</p>
+      <p class="mono" id="footer-meta">Updated October 2026</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="feedback.html">Send feedback</a></li>
+        <li><a href="#main">Back to top</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

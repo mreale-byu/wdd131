@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feedback – The Retrocomputing Gallery</title>
+<meta name="description" content="Send a correction, suggest a machine or program, or share a memory of using these computers in the 1980s.">
+<meta name="keywords" content="WDD 131, retrocomputing, feedback, corrections, vintage computer memories, suggest a machine">
+<meta name="author" content="Luiz MR Lemos">
+<meta name="theme-color" content="#342C26">
+<meta property="og:title" content="Feedback – The Retrocomputing Gallery">
+<meta property="og:description" content="Send a correction, suggest a machine or program, or share a memory.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/og-home.webp">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+<script src="scripts/main.js" defer></script>
+<script src="scripts/feedback.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="led" aria-hidden="true"></span>Retrocomputing Gallery</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="machines.html">Machines</a></li>
+        <li><a href="software.html">Software</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="credits.html">Credits</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="feedback-title">
+    <div class="wrap split">
+      <div>
+        <p class="boot" aria-hidden="true">A&gt;EDIT FEEDBACK.TXT</p>
+        <h1 id="feedback-title">Feedback</h1>
+        <p class="lede">Found a date that is wrong, a machine that should be here, or a program nobody remembers? Or you were there and want to say what it was actually like? Write it down.</p>
+      </div>
+
+      <form class="form-panel" id="feedback-form" action="thankyou.html" method="get">
+        <div class="field" id="field-name">
+          <label for="name">Name (optional)</label>
+          <input type="text" id="name" name="name" autocomplete="name" maxlength="80">
+        </div>
+
+        <div class="field" id="field-email">
+          <label for="email">Email (optional)</label>
+          <p class="hint" id="email-hint">Only used for a reply.</p>
+          <input type="email" id="email" autocomplete="email" maxlength="120" aria-describedby="email-hint">
+        </div>
+
+        <div class="field" id="field-topic">
+          <label for="topic">Topic</label>
+          <select id="topic" required>
+            <option value="" disabled selected>Choose a topic</option>
+            <option value="general">General comment</option>
+            <option value="correction">A correction</option>
+            <option value="suggestion">Suggest a machine or program</option>
+            <option value="memory">Share a memory</option>
+          </select>
+        </div>
+
+        <div class="field" id="field-message">
+          <label for="message">Message (required)</label>
+          <textarea id="message" rows="6" minlength="10" maxlength="2000" required aria-describedby="message-hint"></textarea>
+          <p class="hint" id="message-hint">At least ten characters.</p>
+        </div>
+
+        <button class="button button--primary" type="submit">Send feedback</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <h2>The Retrocomputing Gallery</h2>
+      <p>An educational gallery of personal computing from 1980 to 1989.</p>
+      <p class="mono" id="footer-meta">Updated October 2026</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="feedback.html" aria-current="page">Send feedback</a></li>
+        <li><a href="#main">Back to top</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
