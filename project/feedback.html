@@ -18,7 +18,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/styles.css">
 <script src="scripts/main.js" defer></script>
-<script src="scripts/feedback.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -62,12 +61,12 @@
 
         <div class="field" id="field-topic">
           <label for="topic">Topic</label>
-          <select id="topic" required>
+          <select id="topic" name="topic" required>
             <option value="" disabled selected>Choose a topic</option>
-            <option value="general">General comment</option>
-            <option value="correction">A correction</option>
-            <option value="suggestion">Suggest a machine or program</option>
-            <option value="memory">Share a memory</option>
+            <option value="0">General comment</option>
+            <option value="1">A correction</option>
+            <option value="2">Suggest a machine or program</option>
+            <option value="3">Share a memory</option>
           </select>
         </div>
 
